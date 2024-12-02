@@ -1,7 +1,7 @@
 
 import pino, { Level, LogEvent } from 'pino'
 import { format } from 'date-fns';
-const PUBLIC_DOMAIN = process.env.NODE_ENV === 'production' ? 'https://example.com' : 'http://localhost:3000'
+const PUBLIC_DOMAIN = process.env.NODE_ENV === 'production' ? 'https://next-15-pino-logger.vercel.app' : 'http://localhost:3000'
 
 export const logger = pino({
   level: 'debug',  // 出力するログレベルを設定
