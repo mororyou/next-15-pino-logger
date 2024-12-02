@@ -5,7 +5,7 @@ const PUBLIC_DOMAIN = process.env.NODE_ENV === 'production' ? 'https://next-15-p
 
 export const logger = pino({
   level: 'debug',  // 出力するログレベルを設定
-  transport: {
+  transport: process.env.VERCEL ? undefined : {
     targets: [
       {
         target: 'pino-pretty',
